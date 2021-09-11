@@ -12,9 +12,12 @@ for line in ptt_lines:
 
 x_date_format = [datetime.strptime(d, '%Y/%m/%d').date() for d in x_time]
 
+plt.figure(figsize=(10, 6))
+
 plt.title('Ptt')
 plt.plot(x_date_format, y_ptt, 'o-')
 plt.xlabel('Time')
 plt.ylabel('Ptt')
 
+plt.savefig('ptt.png', bbox_inches='tight')
 plt.show()
